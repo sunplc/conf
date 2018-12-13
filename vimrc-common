@@ -1,0 +1,62 @@
+"setting
+set history=100 "命令的历史记录最多保存100条
+set number " 显示行号
+set tabstop=4 " 打开文件时将每个tab符('\t')显示为4个空格的宽度
+set softtabstop=4 " 编辑文件时每个tab键占4个空格的宽度
+" set expandtab " 将制表符转换为空格
+set shiftwidth=4
+
+set cindent "设置C/C++方式自动对齐
+set autoindent " 自动缩进
+set smarttab " 在行和段开始处使用制表符 
+
+syntax enable " enable syntax processing
+set nocompatible
+
+set path+=** " 搜索时进入子目录搜索，find命令可以递归搜索，find dir/ or find a.txt
+set wildmenu " 使用tab键补全文件名时，显示所有匹配的文件，例如输入 :e ~/.vim<TAB>
+
+" set showcmd " 在右下角显示最后一次输入的命令
+" set cursorline " 高亮当前行
+set showmatch " 高亮显示匹配的括号 [{()}]
+set incsearch " 输入pattern时即时搜索
+set hlsearch " 高亮显示搜索结果，可以用 :nohls 取消显示
+
+let mapleader="," " 设置leader key为逗号
+nnoremap <leader><space> :nohlsearch<CR> " 设置快捷键逗号+空格，执行:nohlsearch(取消高亮显示搜索结果)
+
+set textwidth=80 " 限制行宽，超过后自动换行
+set fileformat=unix " 文件格式，换行符不同，unix=>LF, dos=>CRLF, mac=>CR
+set encoding=utf-8 " 文件编码
+
+set splitright
+set splitbelow
+
+"split navigations 使用CTRL+Vim标准移动键，切换窗口
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+""""""""""""""""""""""""""""""""""""""""""
+" 设置F3快捷键，执行当前文件
+map <F3> :! ./% <CR>
+" 设置F4快捷键 预处理当前文件
+map <F4> :! cpp % <CR>
+" 设置F5快捷键 保存当前C文件并编译保存为当前文件名（后缀改为.out）,并运行
+map <F5> :w <CR> :!gcc % -Wall -lm -o %<.out && ./%<.out <CR>
+" 设置F6快捷键 保存当前C文件并编译保存为当前文件名加_gdb（后缀改为.out）,并使用GDB调试运行
+map <F6> :w <CR> :!gcc % -Wall -lm -g -o %<_gdb.out && gdb %<_gdb.out <CR>
+map <F7> :w <CR> :! make <CR>
+map <F8> :w <CR> :! make clean && make <CR>
+
+" 补全单双引号和各种括号
+inoremap ' ''<LEFT>
+inoremap " ""<LEFT>
+inoremap ( ()<LEFT>
+inoremap [ []<LEFT>
+"inoremap { {}<LEFT>
+inoremap { {}<ESC>i
+" 输入{后立即回车，会空一行，然后补全}
+inoremap {<CR> {<CR><BS>}<ESC>O
+
