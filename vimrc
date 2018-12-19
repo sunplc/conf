@@ -1,4 +1,7 @@
 "settings
+
+set tags=tags
+
 set nocompatible	"不兼容vi
 set history=100		"命令的历史记录最多保存100条
 set number			" 显示行号
