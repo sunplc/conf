@@ -1,5 +1,5 @@
 
-wget https://gitee.com/1533/conf/raw/master/vimrc -O ~/vimrc
+wget https://raw.githubusercontent.com/sunplc/conf/master/vimrc
 
 mv ~/vimrc ~/.vimrc
 
