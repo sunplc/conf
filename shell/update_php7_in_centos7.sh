@@ -43,9 +43,6 @@
 make ZEND_EXTRA_LIBS='-liconv'
 make install
 
-# 安装 swoole 扩展
-pecl install swoole-4.2.3
-
 # 编译安装 swoole
 cd swoole-src-4.2.4/
 phpize
