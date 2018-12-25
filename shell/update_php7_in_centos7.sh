@@ -1,3 +1,8 @@
+# php-7.1.14
+# swoole-4.2.4
+# SWD-3.6.2
+
+
 # 先检查 /usr/local/lib 目录下是否有 libiconv
 
 ./configure  \
