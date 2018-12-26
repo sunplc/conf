@@ -6,6 +6,7 @@ alias ll='ls -altrh --time-style=long-iso'
 alias date='date +%Y-%m-%d__%H:%M:%S__%A_%B'
 alias tmux='tmux -2 new -s coding'
 
-function cdl() {
+# cd and ls a dir
+function cl() {
 	cd "$@" && ls
 }
