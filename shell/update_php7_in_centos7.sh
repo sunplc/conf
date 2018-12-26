@@ -1,4 +1,4 @@
-# php-7.1.14
+# php-7.1.14 NTS  and not DEBUG version
 # swoole-4.2.4
 # SWD-3.6.2
 
