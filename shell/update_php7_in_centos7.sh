@@ -1,6 +1,6 @@
 # php-7.1.14 NTS  and not DEBUG version
-# swoole-4.2.4
-# SWD-3.6.2
+# swoole-4.0.4
+# SD-3.6.5
 
 
 # 先检查 /usr/local/lib 目录下是否有 libiconv
