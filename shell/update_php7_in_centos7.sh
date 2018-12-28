@@ -49,7 +49,7 @@ make ZEND_EXTRA_LIBS='-liconv'
 make install
 
 # 编译安装 swoole
-cd swoole-src-4.2.4/
+cd swoole-src-4.0.4/
 phpize
 
 ./configure \
@@ -70,7 +70,7 @@ pecl install igbinary
 pecl install redis
 
 # 安装 fileinfo 扩展
-cd php-7.2.11/ext/fileinfo
+cd php-7.1.14/ext/fileinfo
 /usr/local/php/bin/phpize
 ./configure --with-php-config=/usr/local/php/bin/php-config
 make
