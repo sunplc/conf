@@ -45,7 +45,6 @@
 --enable-zip \
 --enable-soap \
 --with-gettext \
---disable-fileinfo \
 --enable-opcache \
 --with-xsl
 
