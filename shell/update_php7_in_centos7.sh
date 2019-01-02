@@ -5,6 +5,10 @@
 
 # 先检查 /usr/local/lib 目录下是否有 libiconv
 
+# ubuntu 先检查依赖
+# apt-get install libxml2-dev
+# apt install libssl-dev # openssl not found
+
 ./configure  \
 --prefix=/usr/local/php \
 --with-config-file-path=/usr/local/php/etc \
