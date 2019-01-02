@@ -8,6 +8,7 @@
 # ubuntu 先检查依赖
 # apt-get install libxml2-dev
 # apt install libssl-dev # openssl not found
+# 如果编译时报iconv找不到，去掉--with-iconv-dir重试
 
 ./configure  \
 --prefix=/usr/local/php \
