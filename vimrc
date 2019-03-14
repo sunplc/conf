@@ -226,24 +226,21 @@ if !has("compatible")
 	map <C-n> :NERDTreeToggle<CR>
 	let g:NERDTreeDirArrowExpandable = '+'
 	let g:NERDTreeDirArrowCollapsible = '-'
+
 	" 2. NerdCommenter setting
 	let g:NERDSpaceDelims = 1
 	let g:NERDCompactSexyComs = 0
+
     " 3. papercolor-theme setting
     set t_Co=256
     set background=dark
     colorscheme PaperColor"
+
     " 4. ctrlp setting
     set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 	" tmux setting
-	set term=screen-256color
-
-	" papercolor-theme setting
-	set t_Co=256
-	set background=dark
-	colorscheme PaperColor
-	"colorscheme default
+	" set term=screen-256color
 
 endif
 
