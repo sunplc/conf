@@ -239,8 +239,5 @@ if !has("compatible")
     " 4. ctrlp setting
     set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-	" tmux setting
-	" set term=screen-256color
-
 endif
 
