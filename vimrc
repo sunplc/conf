@@ -234,7 +234,7 @@ if !has("compatible")
     " 3. papercolor-theme setting
     " set t_Co=256
     " set background=dark
-    " colorscheme PaperColor"
+    colorscheme PaperColor"
 
     " 4. ctrlp setting
     set runtimepath^=~/.vim/bundle/ctrlp.vim
