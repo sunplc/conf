@@ -6,7 +6,7 @@ SVN_PATH=/app/svn_backup/LGF
 WORKPATH=/app/AGT_ONLINE
 
 DB_USER='root'
-DB_PASSWD='fdsaf@#!@%'
+DB_PASSWD='password
 DATABASE=cpm_agent
 
 echo '开始备份目录...'
