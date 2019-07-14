@@ -4,9 +4,9 @@ cd  `dirname $0`
 
 sql_file_name="jianai360_$(date +'%Y-%m-%d').sql"
 
-sshpass -p 'b4m4AXlk1vynL6ADdqVK11' scp -P 10667 root@59.175.144.11:/web/bak/$sql_file_name .
+sshpass -p 'password' scp -P 10667 root@59.175.144.11:/web/bak/$sql_file_name .
 
-sshpass -p 'b4m4AXlk1vynL6ADdqVK11' scp -P 10667 root@59.175.144.11:/usr/local/redis/data/dump.rdb .
+sshpass -p 'password' scp -P 10667 root@59.175.144.11:/usr/local/redis/data/dump.rdb .
 
 yesterday_sql_file_name="jianai360_$(date --date="1	days ago" +'%Y-%m-%d').sql"
 
