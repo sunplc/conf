@@ -233,8 +233,8 @@ if !has("compatible")
 	let g:NERDCompactSexyComs = 0
 
     " 3. papercolor-theme setting
-    set t_Co=256
-    set background=dark
+    " set t_Co=256
+    " set background=dark
     colorscheme PaperColor"
 
     " 4. ctrlp setting
