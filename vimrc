@@ -53,8 +53,9 @@ map <F4> :w <CR> :! php % <CR>
 map <F5> :w <CR> :!gcc % -Wall -std=c99 -lm -o %<.out && ./%<.out <CR>
 " 设置F6快捷键 保存当前C文件并编译保存为当前文件名加.gdb（后缀改为.out）,并使用GDB调试运行
 map <F6> :w <CR> :!gcc % -Wall -lm -g -o %<.gdb.out && gdb %<.gdb.out <CR>
-map <F7> :w <CR> :! make <CR>
-map <F8> :w <CR> :! make clean && make <CR>
+" 编译、链接并执行当前.s文件，然后输出上一个进程的exit status code
+map <F7> :w <CR> :! as % -o %<.o && ld %<.o -o %< && ./%< && echo $? <CR>
+map <F8> :w <CR> :! make <CR>
 
 "" 补全单双引号和各种括号
 "inoremap ' ''<LEFT>
