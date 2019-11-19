@@ -37,7 +37,7 @@ set encoding=utf-8	" 文件编码
 set splitright
 set splitbelow
 
-"split navigations 使用CTRL+Vim标准移动键，切换窗口
+" 使用 ctrl + h/j/k/l 快捷键切换窗口
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -55,7 +55,6 @@ map <F5> :w <CR> :!gcc % -Wall -std=c99 -lm -o %<.out && ./%<.out <CR>
 map <F6> :w <CR> :!gcc % -Wall -lm -g -o %<.gdb.out && gdb %<.gdb.out <CR>
 " 编译、链接并执行当前.s文件，然后输出上一个进程的exit status code
 map <F7> :w <CR> :! as % -o %<.o && ld %<.o -o %< && ./%< && echo $? <CR>
-map <F8> :w <CR> :! make <CR>
 
 "" 补全单双引号和各种括号
 "inoremap ' ''<LEFT>
