@@ -197,12 +197,12 @@ if !has("compatible")
 
 	" 1.安装 Vundle
 	"   git clone https://github.com/VundleVim/Vundle.vim.git  ~/.vim/bundle/Vundle.vim
-    " 2.执行 :PluginInstall
-    " 3.安装 ctrlp
-    "   cd ~/.vim
-    "   git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim
-    "   执行  :helptags ~/.vim/bundle/ctrlp.vim/doc
-    "   重启执行  :helptags ~/.vim/bundle/ctrlp.vim/doc
+	" 2.执行 :PluginInstall
+	" 3.安装 ctrlp
+	"   cd ~/.vim
+	"   git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim
+	"   执行  :helptags ~/.vim/bundle/ctrlp.vim/doc
+	"   重启执行  :helptags ~/.vim/bundle/ctrlp.vim/doc
 
 	""""""""""  Vundle Plugin manage """"""""""""""""""
 	filetype off                  " required
@@ -214,30 +214,28 @@ if !has("compatible")
 	Plugin 'VundleVim/Vundle.vim'
 	Plugin 'scrooloose/nerdtree'
 	Plugin 'scrooloose/nerdcommenter'
-	Plugin 'NLKNguyen/papercolor-theme'
 
 	" All of your Plugins must be added before the following line
 	call vundle#end()            " required
 	filetype plugin indent on    " required
 	"""""""""""""""""""""""""""""""""""""""""""""""""""
  
-	" 插件设置
-	" 1. NerdTree setting
+	" Plugin Setting
+	" NerdTree setting
 	map <C-n> :NERDTreeToggle<CR>
 	let g:NERDTreeDirArrowExpandable = '+'
 	let g:NERDTreeDirArrowCollapsible = '-'
 
-	" 2. NerdCommenter setting
+	" NerdCommenter setting
 	let g:NERDSpaceDelims = 1
 	let g:NERDCompactSexyComs = 0
 
-    " 3. papercolor-theme setting
-    " set t_Co=256
-    " set background=dark
-    colorscheme PaperColor"
+	" papercolor-theme setting
+	" set t_Co=256
+	" set background=dark
 
-    " 4. ctrlp setting
-    set runtimepath^=~/.vim/bundle/ctrlp.vim
+	" ctrlp setting
+	set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 endif
 
