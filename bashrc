@@ -7,14 +7,14 @@ alias date='date +%Y-%m-%d__%H:%M:%S'
 alias tmux='tmux -2 new -s coding'
 
 # Alias for git
-alias gb='git branch '
-alias gs='git status '
-alias ga='git add '
-alias gc='git commit '
+alias gb='git branch'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
 alias gp='git push'
-alias gpl='git pull '
+alias gpl='git pull'
 alias gd='git diff'
-alias gco='git checkout '
+alias gco='git checkout'
 
 # cd and ls a dir
 function cl() {
