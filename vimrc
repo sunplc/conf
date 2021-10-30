@@ -212,6 +212,7 @@ if !has("compatible")
 	call vundle#begin()
 
 	Plugin 'VundleVim/Vundle.vim'
+    Plugin 'NLKNguyen/papercolor-theme'
 	Plugin 'scrooloose/nerdtree'
 	Plugin 'scrooloose/nerdcommenter'
 
@@ -231,8 +232,8 @@ if !has("compatible")
 	let g:NERDCompactSexyComs = 0
 
 	" papercolor-theme setting
-	" set t_Co=256
-	" set background=dark
+	set background=dark
+    colorscheme PaperColor
 
 	" ctrlp setting
 	set runtimepath^=~/.vim/bundle/ctrlp.vim
