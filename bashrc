@@ -7,16 +7,23 @@ alias date='date +%Y-%m-%d__%H:%M:%S'
 alias tmux='tmux -2 new -s coding'
 
 # Alias for git
+
+###  设置 git diff 使用 vimdiff ###
+# git config --global diff.tool vimdiff
+# git config --global difftool.prompt false
+# git config --global alias.d difftool
+#
+# git config --global difftool.trustExitCode true
+# git config --global mergetool.trustExitCode true
+###################################
+
 alias gb='git branch'
 alias gs='git status'
 alias ga='git add'
+alias gl='git log'
 alias gc='git commit -m'
+alias gck='git checkout'
 alias gp='git push'
 alias gpl='git pull'
-alias gd='git diff'
+alias gd='git d'
 alias gco='git checkout'
-
-# cd and ls a dir
-function cl() {
-	cd "$@" && ls
-}
