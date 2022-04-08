@@ -43,6 +43,13 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" when using d in Insert mode or Visual mode,
+" put deleted content to black hole register 
+" instead of default register
+nnoremap d "_d
+vnoremap d "_d
+nnoremap <Del> "_x
+
 """"""""""""""""""""""""""""""""""""""""""
 " 设置F3快捷键，执行当前文件
 map <F3> :w <CR> :! ./% <CR>
