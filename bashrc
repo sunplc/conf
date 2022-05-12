@@ -2,6 +2,7 @@
 
 PS1='\[\033[01;32m\][\u@\h \W]$\[\033[00;37m\] '
 
+alias ls='ls --color=auto'
 alias ll='ls -altrh --time-style=long-iso'
 alias date='date +%Y-%m-%d__%H:%M:%S'
 alias tmux='tmux -2 new -s coding'
