@@ -37,6 +37,9 @@ set encoding=utf-8	" 文件编码
 set splitright
 set splitbelow
 
+set novisualbell	" 禁用闪屏
+set vb t_vb=		" 禁用响铃
+
 " 使用 ctrl + h/j/k/l 快捷键切换窗口
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
