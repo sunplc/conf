@@ -22,7 +22,7 @@ set path+=**		" 搜索时进入子目录搜索，find命令可以递归搜索，
 set wildmenu		" 使用tab键补全文件名时，显示所有匹配的文件，例如输入 :e ~/.vim<TAB>
 
 " set cursorline	" 高亮当前行
-set showmatch		" 高亮显示匹配的括号 [{()}]
+" set showmatch		" 高亮显示匹配的括号 [{()}]
 set incsearch		" 输入pattern时即时搜索
 set hlsearch		" 高亮显示搜索结果，可以用 :nohls 取消显示
 
@@ -46,12 +46,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" when using d in Insert mode or Visual mode,
-" put deleted content to black hole register 
-" instead of default register
-nnoremap d "_d
-vnoremap d "_d
-nnoremap <Del> "_x
 
 """"""""""""""""""""""""""""""""""""""""""
 " 设置F3快捷键，执行当前文件
@@ -178,28 +172,6 @@ endfunction
 inoremap <BS> ..<ESC>:call CuteDelete()<CR>a<BS><BS>
 
 
-""""""""""""""""""""""""""""""""""""""""""""
-" 新建文件时，自动根据扩展名加载模板文件
-autocmd! BufNewFile * call LoadTemplate()
-fun LoadTemplate()
-	"获取扩展名或者类型名
-	let ext = expand ("%:e")
-	let tpl = expand("~/.vim/tpl/".ext.".tpl")
-	if !filereadable(tpl)
-		"echohl WarningMsg | echo "No template [".tpl."] for .".ext | echohl None
-		return
-	endif
-
-	"读取模板内容
-	silent execute "0r ".tpl
-	"指定光标位置
-	"silent execute "normal 5G$"
-	"silent call search("#cursor#", "w")
-	"silent execute "normal 7x"
-	"进入插入模式
-	"startinsert
-endfun
-""""""""""""""""""""""""""""""""""""""""""""
 
 " If we're not in vi-compatible mode, then load advanced VIM code
 " 仅当启动vim时才加载以下设置，避免启动vi时报错
