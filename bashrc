@@ -22,7 +22,7 @@ alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
 
-# You can use `gl -all` list all git log.
+# You can use `gl --all` list all git log.
 alias gl="git log --oneline --graph"
 
 alias gd='git diff'
