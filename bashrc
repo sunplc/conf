@@ -18,13 +18,11 @@ alias tmux='tmux -2 new -s coding'
 # git config --global mergetool.trustExitCode true
 ###################################
 
-alias gb='git branch'
 alias gs='git status'
 alias ga='git add'
-alias gl='git log'
 alias gc='git commit -m'
-alias gck='git checkout'
-alias gp='git push'
-alias gpl='git pull'
-alias gd='git d'
-alias gco='git checkout'
+
+# You can use `gl -all` list all git log.
+alias gl="git log --oneline --graph"
+
+alias gd='git diff'
